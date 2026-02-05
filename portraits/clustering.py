@@ -159,4 +159,4 @@ def clustering_select_best_tr(data, n_clusters=4, threshold_mm=(0.3, 0.6),
         raise Exception('No partition with n_clusters = {}'.format(n_clusters))
 
     cl_scs_filtered.sc += 1 - cl_scs_filtered.sc.min()
-    return (cl_scs_filtered.ch / cl_scs_filtered.db / cl_scs_filtered.sc).sort_values().index[-1]
+    return cl_scs, (cl_scs_filtered.ch / cl_scs_filtered.db / cl_scs_filtered.sc).sort_values().index[-1] # changed return values!!!

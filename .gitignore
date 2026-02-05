@@ -127,3 +127,9 @@ dmypy.json
 
 # Idea
 .idea/
+
+lair/
+data/
+plots/
+deconvolutions/
+*.tar

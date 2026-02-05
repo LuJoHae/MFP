@@ -60,7 +60,7 @@ def ssgsea_formula(data, gene_sets, rank_method='max'):
 
 
 def median_scale(data, clip=None):
-    c_data = (data - data.median()) / data.mad()
+    c_data = (data - data.median()) / data.std() # should be MAD not Std
     if clip is not None:
         return c_data.clip(-clip, clip)
     return c_data

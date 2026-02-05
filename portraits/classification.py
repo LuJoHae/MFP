@@ -60,7 +60,7 @@ class KNeighborsClusterClassifier:
 
         if self.norm:
             self.median = X.median()
-            self.mad = X.mad()
+            self.mad = X.std() # should be MAD not Std
 
         self.X = self.preprocess_data(X)
         self.y = copy.deepcopy(y)
